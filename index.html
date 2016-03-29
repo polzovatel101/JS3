@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="container">
 
 </div>
 <div class="buttons">
-    <button onclick="initTimer();">START</button>
-    <button onclick="resetTimer();">RESET</button>
-    <button onclick="pauseTimer();">PAUSE</button>
+    <button class="button-success pure-button" onclick="initTimer();">START</button>
+    <button class="button-error pure-button" onclick="resetTimer();">RESET</button>
+    <button class="button-secondary pure-button" onclick="pauseTimer();">PAUSE</button>
 </div>
 <script src="js/script.js"></script>
 </body>

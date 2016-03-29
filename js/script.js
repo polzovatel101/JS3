@@ -10,7 +10,7 @@ var createTimer = {
 
 function startTimer() {
     createVision();
-    createTimer.miliseconds += 41;
+    createTimer.miliseconds += 31;
     if (createTimer.miliseconds >= 1000) {
         createTimer.seconds++;
         createTimer.miliseconds = 0;
@@ -27,11 +27,16 @@ function startTimer() {
 
 function pauseTimer() {
     clearInterval(timerId);
+    var bStart = document.getElementsByClassName('button-success');
+    bStart[0].classList.remove('pure-button-disabled');
     createVision();
 }
 
 function initTimer() {
-    timerId = setInterval(startTimer, 41);
+    var bStart = document.getElementsByClassName('button-success');
+    console.log(bStart);
+    bStart[0].className += ' pure-button-disabled';
+    timerId = setInterval(startTimer, 31);
 }
 
 function createVision() {
@@ -114,9 +119,11 @@ function createVision() {
 }
 
 function resetTimer() {
-     createTimer.miliseconds = 0;
-     createTimer.seconds = 0;
-     createTimer.minutes = 0;
-     createTimer.hour = 0;
+    createTimer.miliseconds = 0;
+    createTimer.seconds = 0;
+    createTimer.minutes = 0;
+    createTimer.hour = 0;
+    var bStart = document.getElementsByClassName('button-success');
+    bStart[0].classList.remove('pure-button-disabled');
     createVision();
 }
