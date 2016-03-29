@@ -29,6 +29,7 @@ function pauseTimer() {
     clearInterval(timerId);
     var bStart = document.getElementsByClassName('button-success');
     bStart[0].classList.remove('pure-button-disabled');
+    bStart[0].disabled = false;
     createVision();
 }
 
@@ -36,6 +37,7 @@ function initTimer() {
     var bStart = document.getElementsByClassName('button-success');
     console.log(bStart);
     bStart[0].className += ' pure-button-disabled';
+    bStart[0].disabled = true;
     timerId = setInterval(startTimer, 31);
 }
 
@@ -125,5 +127,6 @@ function resetTimer() {
     createTimer.hour = 0;
     var bStart = document.getElementsByClassName('button-success');
     bStart[0].classList.remove('pure-button-disabled');
+    bStart[0].disabled = false;
     createVision();
 }
